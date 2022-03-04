@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Stripe.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/'templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -97,6 +97,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
@@ -120,4 +121,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STRIPE_PUBLISHABLE_KEY = "pk_test_51KYQVuSCUKV9rHL1bEej3vjO9aw5TliBN9hnq1o40aAmxof5YpMT9InY99AiO2yqzySBHXvlpYFUedsQiP0YhY9A00QBBVVDRA"
 STRIPE_SECRET_KEY = "sk_test_51KYQVuSCUKV9rHL1UH7HC5lEkCZAW9KMwhgwaw9npCjxws0eEzn2h14ByjqknLJpnEROVtdRIpWlP9kG4Ql55vZ000KXyZI5yr"
-STRIPE_WEBHOOK_SECRET = ""
+STRIPE_WEBHOOK_SECRET = "whsec_d1c36b6a6fe12fe8088c40e3dca6b136d9adcb897b4d70a33d10f85818838dfb"
